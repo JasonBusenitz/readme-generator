@@ -1,59 +1,58 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  switch (license) {
+
+function renderLicenseBadge(data) {
+  switch (data) {
     case 'MIT License':
-      '## MIT License';
-      break;
+      return 'MIT License';
     case 'Apache License 2.0':
-      '## Apache License 2.0';
-      break;
+      return 'Apache License 2.0';
     case 'GNU General Public License (GPL) v3':
-      '## GNU General Public License (GPL) v3';
-      break;
+      return 'GNU General Public License (GPL) v3';
     case 'Mozilla Public License 2.0':
-      ' ## Mozilla Public License 2.0';
-      break;
+      return 'Mozilla Public License 2.0';
     case 'BSD 3-Clause License':
-      '## BSD 3-Clause License';
-      break;
+      return 'BSD 3-Clause License';
     default:
-      [];
-      break;
+      return '';
   }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
-  switch (license) {
+
+function renderLicenseLink(data) {
+
+  switch (data) {
     case 'MIT License':
-      ' https://opensource.org/license/mit';
-      break;
+      return 'https://opensource.org/license/mit';
     case 'Apache License 2.0':
-      ' https://www.apache.org/licenses/LICENSE-2.0';
-      break;
+      return 'https://www.apache.org/licenses/LICENSE-2.0';
     case 'GNU General Public License (GPL) v3':
-      'https://www.gnu.org/licenses/gpl-3.0.en.html';
-      break;
+      return 'https://www.gnu.org/licenses/gpl-3.0.en.html';
     case 'Mozilla Public License 2.0':
-      'https://www.mozilla.org/en-US/MPL/2.0/';
-      break;
+      return 'https://www.mozilla.org/en-US/MPL/2.0/';
     case 'BSD 3-Clause License':
-      'https://opensource.org/license/bsd-3-clause';
-      break;
+      return 'https://opensource.org/license/bsd-3-clause';
     default:
-      [];
-      break;
+      return '';
   }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  renderLicenseBadge(license);
-  renderLicenseLink(license);
+function renderLicenseSection(data) {
 
+  switch (data) {
+    case 'None':
+      return [];
+    default:
+      return `
+  ${renderLicenseBadge(data)}
+  
+ More info on ${renderLicenseBadge(data)} at: ${renderLicenseLink(data)}.
+  `;
+  }
 }
 
 // TODO: Create a function to generate markdown for README
@@ -63,13 +62,14 @@ function generateMarkdown(data) {
 
 ${renderLicenseSection(data.license)}
 
+
 ## Table of Contents
--[Installation](#installation)
--[Usage](#usage)
--[Credits]{#credits}
--[Contribution]{#How can you Contribute?}
--[Tests]{#tests}
--[Questions]{#questions}
+>* [Installation](#installation)
+>* [Usage](#usage)
+>* [Credits](#credits)
+>* [Contribution](#how-can-you-contribute?)
+>* [Tests](#tests)
+>* [Questions](#questions)
 
 ## Installation
 ${data.install}
@@ -87,10 +87,14 @@ ${data.contribution}
 ${data.tests}
 
 ## Questions
-If you have any questions feel free to reach out to me!
-Email: ${data.email}
-Git Hub: ${data.gitHUbUserName}
-${data.gitHUbLink}
+
+ If you have any questions feel free to reach out to me!
+
+>* Email: ${data.email}
+
+>* Git Hub: ${data.gitHUbUserName}
+
+>* Git Hub Repo Link: ${data.gitHUbLink}
 `;
 }
 
