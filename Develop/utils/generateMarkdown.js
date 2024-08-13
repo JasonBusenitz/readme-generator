@@ -16,6 +16,33 @@ function generateMarkdown(data) {
 ## ${data.description}
 
 ## Table of Contents
+-[Installation](#installation)
+-[Usage](#usage)
+-[Credits]{#credits}
+-[Contribution]{#How can you Contribute?}
+-[Tests]{#tests}
+-[Questions]{#questions}
+
+## Installation
+${data - install}
+
+## Usage
+${data - usage}
+
+## Credits
+${data - credits}
+
+## How can you Contribute?
+${data - contribution}
+
+## Tests
+${data - tests}
+
+## Questions
+If you have any questions feel free to reach out to me!
+Email: ${data - email}
+Git Hub: ${data - gitHUbUserName}
+${data - gitHUbLink}
 `;
 }
 

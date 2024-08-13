@@ -34,6 +34,11 @@ const questions = [
                 },
                 {
                     type: 'input',
+                    name: 'data-credits',
+                    messege: 'This is where you credit others who have held you build your application.'
+                }
+                , {
+                    type: 'input',
                     name: 'data-contribution',
                     message: 'How can other developers contribut to your application? If they can not simply put N/A',
                 },
