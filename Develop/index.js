@@ -43,7 +43,7 @@ const questions = [
     {
         type: 'input',
         name: 'tests',
-        message: 'This is where you pate tests for your application, as well as instructions on how to use those tests.',
+        message: 'This is where you paste tests for your application, as well as instructions on how to use those tests. Again put N/A if there are none.',
     },
     {
         type: 'input',
@@ -53,7 +53,7 @@ const questions = [
     {
         type: 'input',
         name: 'gitHUbLink',
-        message: 'Paste a link to your Git Hub account here.',
+        message: 'Paste a link to your Git Hub Repo here.',
     },
     {
         type: 'input',
