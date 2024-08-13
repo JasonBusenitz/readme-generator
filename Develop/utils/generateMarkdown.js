@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  switch (license) {
+function renderLicenseBadge(data) {
+  switch (data.license) {
     case 'MIT License':
       '## MIT License';
       break;
@@ -18,15 +18,15 @@ function renderLicenseBadge(license) {
       '## BSD 3-Clause License';
       break;
     default:
-      [];
+      '';
       break;
   }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
-  switch (license) {
+function renderLicenseLink(data) {
+  switch (data.license) {
     case 'MIT License':
       ' https://opensource.org/license/mit';
       break;
@@ -43,16 +43,16 @@ function renderLicenseLink(license) {
       'https://opensource.org/license/bsd-3-clause';
       break;
     default:
-      [];
+      '';
       break;
   }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  renderLicenseBadge(license);
-  renderLicenseLink(license);
+function renderLicenseSection(data) {
+  renderLicenseBadge(data);
+  renderLicenseLink(data);
 
 }
 
