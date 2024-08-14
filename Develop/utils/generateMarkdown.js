@@ -67,7 +67,7 @@ ${renderLicenseSection(data.license)}
 >* [Installation](#installation)
 >* [Usage](#usage)
 >* [Credits](#credits)
->* [Contribution](#how-can-you-contribute?)
+>* [Contribution](#contribution)
 >* [Tests](#tests)
 >* [Questions](#questions)
 
@@ -80,7 +80,7 @@ ${data.usage}
 ## Credits
 ${data.credits}
 
-## How can you Contribute?
+## Contribution
 ${data.contribution}
 
 ## Tests
