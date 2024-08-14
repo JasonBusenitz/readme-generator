@@ -5,7 +5,7 @@
 >* [Installation](#installation)
 >* [Usage](#usage)
 >* [Credits](#credits)
->* [Contribution](#how-can-you-contribute?)
+>* [Contribution](#contribution)
 >* [Tests](#tests)
 >* [Questions](#questions)
 
@@ -18,7 +18,7 @@ Once everything is installed simply run the node index.js command in the command
 ## Credits
 Ian the Teaching assistant.
 
-## How can you Contribute?
+## Contribution
 N/A
 
 ## Tests
